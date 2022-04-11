@@ -30,7 +30,7 @@ animal_class_cnidarioloc
         questions.tipo_animal($ans)
         check $ans in (2,)
         questions.animal_locomove($ans1)
-        check $ans1 in (2,)
+        check $ans1 in (1,)
         questions.animal_cnidocitos($ans2)
         check $ans2 in (1,)
 
@@ -42,4 +42,14 @@ animal_class_cnidarionloc
         questions.animal_locomove($ans1)
         check $ans1 in (2,)
         questions.animal_cnidocitos($ans2)
-        check $ans2 in (2,)
+        check $ans2 in (1,)
+
+animal_class_porifero
+    use animal_class(poriferos)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (2,)
+        questions.animal_locomove($ans1)
+        check $ans in (2,)
+        questions.animal_cnidocitos($ans2)
+        check $ans in (2,) 
