@@ -1,0 +1,12 @@
+# Regras simples
+
+animal_tipo_vertebrado
+    use tipo_vertebrado(True)
+    when
+        facts.vertebrado(True)
+
+animal_class_mamifero
+    use animal_class(mamifero)
+    when
+        tipo_vertebrado($tipo)
+        facts.mama(True)

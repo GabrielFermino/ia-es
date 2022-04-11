@@ -1,0 +1,45 @@
+animal_class_mamifero
+    use animal_class(mamifero)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (1,)
+        questions.animal_mamas($ans)
+        check $ans in (1,)
+    
+animal_class_peixe
+    use animal_class(peixe)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (1,)
+        questions.animal_escamas($ans)
+        check $ans in (1,)
+
+animal_class_cnidario_loc
+    use animal_class(cnidariolocomocao)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (2,)
+        questions.animal_locomove($ans)
+        check $ans in (1,)
+        questions.animal_cnidocitos($ans)
+        check $ans in (1,)
+
+animal_class_cnidario_nloc
+    use animal_class(cnidarioslocomocao)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (2,)
+        questions.animal_locomove($ans)
+        check $ans in (2,)
+        questions.animal_cnidocitos($ans)
+        check $ans in (1,)
+
+animal_class_porifero
+    use animal_class(poliferos)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (2,)
+        questions.animal_locomove($ans)
+        check $ans in (2,)
+        questions.animal_cnidocitos($ans)
+        check $ans in (2,)

@@ -1,0 +1,34 @@
+tipo_animal($ans)
+    Qual o tipo do animal?
+    ---
+    $ans = select_1
+        1: Vertebrado
+        2: Invertebrado
+    
+animal_mamas($ans)
+    O animal possui mamas?
+    ---
+    $ans = select_1
+        1: Possui
+        2: Nao possui
+
+animal_escamas($ans)
+    O animal possui escamas?
+    ---
+    $ans = select_1
+        1: Possui
+        2: Nao Possui
+
+animal_locomove($ans)
+    O possui capacidade de locomocao?
+    ---
+    $ans = select_1
+        1: Possui
+        2: Nao Possui
+
+animal_cnidocitos($ans)
+    O possui cnidocitos?
+    ---
+    $ans = select_1
+        1: Possui
+        2: Nao Possui
