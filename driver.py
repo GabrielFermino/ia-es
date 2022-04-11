@@ -42,5 +42,5 @@ def bc_test_question():
     print("Programa Finalizado!")
 
 
-# shutil.rmtree('./compiled_krb')
-# driver.bc_test_question()
+shutil.rmtree('./compiled_krb')
+driver.bc_test_question()

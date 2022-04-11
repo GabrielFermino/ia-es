@@ -3,43 +3,43 @@ animal_class_mamifero
     when
         questions.tipo_animal($ans)
         check $ans in (1,)
-        questions.animal_mamas($ans)
-        check $ans in (1,)
-    
+        questions.animal_mamas($ans1)
+        check $ans1 in (1,)
+
 animal_class_peixe
     use animal_class(peixe)
     when
         questions.tipo_animal($ans)
         check $ans in (1,)
-        questions.animal_escamas($ans)
-        check $ans in (1,)
+        questions.animal_escamas($ans1)
+        check $ans1 in (1,)
 
-animal_class_cnidario_loc
-    use animal_class(cnidariolocomocao)
+animal_class_cobra
+    use animal_class(cobra)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (1,)
+        questions.animal_mamas($ans1)
+        check $ans1 in (2,)
+        questions.animal_escamas($ans2)
+        check $ans2 in (2,)
+
+animal_class_cnidarioloc
+    use animal_class(cnidarioloc)
     when
         questions.tipo_animal($ans)
         check $ans in (2,)
-        questions.animal_locomove($ans)
-        check $ans in (1,)
-        questions.animal_cnidocitos($ans)
-        check $ans in (1,)
+        questions.animal_locomove($ans1)
+        check $ans1 in (2,)
+        questions.animal_cnidocitos($ans2)
+        check $ans2 in (1,)
 
-animal_class_cnidario_nloc
-    use animal_class(cnidarioslocomocao)
+animal_class_cnidarionloc
+    use animal_class(cnidarionloc)
     when
         questions.tipo_animal($ans)
         check $ans in (2,)
-        questions.animal_locomove($ans)
-        check $ans in (2,)
-        questions.animal_cnidocitos($ans)
-        check $ans in (1,)
-
-animal_class_porifero
-    use animal_class(poliferos)
-    when
-        questions.tipo_animal($ans)
-        check $ans in (2,)
-        questions.animal_locomove($ans)
-        check $ans in (2,)
-        questions.animal_cnidocitos($ans)
-        check $ans in (2,)
+        questions.animal_locomove($ans1)
+        check $ans1 in (2,)
+        questions.animal_cnidocitos($ans2)
+        check $ans2 in (2,)
