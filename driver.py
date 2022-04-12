@@ -32,7 +32,7 @@ def bc_test_question():
     try:
         with engine.prove_goal('more_rules.animal_class($class)') as gen:
             for vars, plan in gen:
-                print("O animal é: %s" % (vars['class']))
+                print("O animal é um exemplo de %s!!" % (vars['class']))
                 input("Press Enter to continue...")
                 os.system('cls')
                 bc_test_question()

@@ -1,55 +1,62 @@
 animal_class_mamifero
-    use animal_class(mamifero)
+    use animal_class(Mamifero)
     when
         questions.tipo_animal($ans)
         check $ans in (1,)
-        questions.animal_mamas($ans1)
-        check $ans1 in (1,)
+        questions.animal_mamas(True)
+
+animal_class_reptil_carapaca
+    use animal_class(Reptil)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (1,)
+        questions.animal_carapaca(True)
 
 animal_class_peixe
-    use animal_class(peixe)
+    use animal_class(Peixe)
     when
         questions.tipo_animal($ans)
         check $ans in (1,)
-        questions.animal_escamas($ans1)
-        check $ans1 in (1,)
+        questions.animal_escamas(True)
+        questions.animal_respiracao($ans2)
+        check $ans2 in (1,)
 
-animal_class_cobra
-    use animal_class(cobra)
+animal_class_reptil_escama
+    use animal_class(Reptil)
     when
         questions.tipo_animal($ans)
         check $ans in (1,)
-        questions.animal_mamas($ans1)
-        check $ans1 in (2,)
-        questions.animal_escamas($ans2)
+        questions.animal_escamas(True)
+        questions.animal_respiracao($ans2)
         check $ans2 in (2,)
 
+animal_class_ave
+    use animal_class(Ave)
+    when
+        questions.tipo_animal($ans)
+        check $ans in (1,)
+        questions.animal_penas(True)
+
 animal_class_cnidarioloc
-    use animal_class(cnidarioloc)
+    use animal_class(Cnidarioloc)
     when
         questions.tipo_animal($ans)
         check $ans in (2,)
-        questions.animal_locomove($ans1)
-        check $ans1 in (1,)
-        questions.animal_cnidocitos($ans2)
-        check $ans2 in (1,)
+        questions.animal_locomove(True)
+        questions.animal_cnidocitos(True)
 
 animal_class_cnidarionloc
-    use animal_class(cnidarionloc)
+    use animal_class(Cnidarionloc)
     when
         questions.tipo_animal($ans)
         check $ans in (2,)
-        questions.animal_locomove($ans1)
-        check $ans1 in (2,)
-        questions.animal_cnidocitos($ans2)
-        check $ans2 in (1,)
+        questions.animal_locomove(False)
+        questions.animal_cnidocitos(True)
 
 animal_class_porifero
-    use animal_class(poriferos)
+    use animal_class(Poriferos)
     when
         questions.tipo_animal($ans)
         check $ans in (2,)
-        questions.animal_locomove($ans1)
-        check $ans1 in (2,)
-        questions.animal_cnidocitos($ans2)
-        check $ans2 in (2,) 
+        questions.animal_locomove(False)
+        questions.animal_cnidocitos(False)
