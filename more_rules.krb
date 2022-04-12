@@ -50,6 +50,6 @@ animal_class_porifero
         questions.tipo_animal($ans)
         check $ans in (2,)
         questions.animal_locomove($ans1)
-        check $ans in (2,)
+        check $ans1 in (2,)
         questions.animal_cnidocitos($ans2)
-        check $ans in (2,) 
+        check $ans2 in (2,) 

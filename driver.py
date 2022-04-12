@@ -1,5 +1,5 @@
-import driver
 import sys
+import os
 import shutil
 from pyke import knowledge_engine, krb_traceback
 
@@ -33,9 +33,11 @@ def bc_test_question():
         with engine.prove_goal('more_rules.animal_class($class)') as gen:
             for vars, plan in gen:
                 print("O animal é: %s" % (vars['class']))
+                input("Press Enter to continue...")
+                os.system('cls')
+                bc_test_question()
 
     except:
-        print("Descricao incompativel")
         krb_traceback.print_exc()
         sys.exit(1)
 
