@@ -37,26 +37,119 @@ animal_class_ave
         check $ans in (1,)
         questions.animal_penas(True)
 
-animal_class_cnidarioloc
-    use animal_class(Cnidarioloc)
+animal_class_cordados
+    use animal_class(Cordado)
     when
         questions.tipo_animal($ans)
         check $ans in (2,)
-        questions.animal_locomove(True)
-        questions.animal_cnidocitos(True)
+        questions.animal_dorsal(True)
 
-animal_class_cnidarionloc
-    use animal_class(Cnidarionloc)
+animal_class_celenterados
+    use animal_class(Celenterados)
     when
-        questions.tipo_animal($ans)
-        check $ans in (2,)
-        questions.animal_locomove(False)
-        questions.animal_cnidocitos(True)
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_dorsal(False)
+        questions.animal_tora($ans2)
+        check $ans2 in (1,)
+        questions.animal_abertura($ans3)
+        check $ans3 == 1
+        questions.abertura_tentaculo(True)
 
-animal_class_porifero
-    use animal_class(Poriferos)
+animal_class_espongiarios
+    use animal_class(Espongiarios)
     when
-        questions.tipo_animal($ans)
-        check $ans in (2,)
-        questions.animal_locomove(False)
-        questions.animal_cnidocitos(False)
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_tora($ans2)
+        check $ans2 in (1,)
+        questions.animal_abertura($ans3)
+        check $ans3 == 1
+        questions.corpo_poros(True)
+
+animal_class_platelminstas
+    use animal_class(Platelmintas)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_tora($ans2)
+        check $ans2 in (1,2)
+        questions.animal_abertura($ans3)
+        check $ans3 == 1
+        questions.corpo_achatado(True)
+
+animal_class_equinodermes
+    use animal_class(Equinodermes)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_tora($ans2)
+        check $ans2 in (1,)
+        questions.animal_abertura($ans3)
+        check $ans3 == 2
+        questions.animal_simetria($ans4)
+        check $ans4 in (1,)
+
+animal_class_anelideo
+    use animal_class(Anelideo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_tora($ans2)
+        check $ans2 in (1,2)
+        questions.animal_abertura($ans3)
+        check $ans3 == 2
+        questions.animal_simetria($ans4)
+        check $ans4 in (2,)
+        questions.animal_corpo($ans5)
+        check $ans5 in (1,)
+        questions.corpo_seg($ans6)
+        check $ans6 in (1,)
+
+animal_class_artropode
+    use animal_class(Artropode)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_tora($ans2)
+        check $ans2 in (1,2)
+        questions.animal_abertura($ans3)
+        check $ans3 == 2
+        questions.animal_simetria($ans4)
+        check $ans4 in (2,)
+        questions.animal_corpo($ans5)
+        check $ans5 in (1,)
+        questions.corpo_seg($ans6)
+        check $ans6 in (2,)
+
+animal_class_moluscos
+    use animal_class(Molusco)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_tora($ans2)
+        check $ans2 in (1,2)
+        questions.animal_abertura($ans3)
+        check $ans3 == 2
+        questions.animal_simetria($ans4)
+        check $ans4 in (2,)
+        questions.animal_corpo($ans5)
+        check $ans5 in (2,)
+        questions.corpo_nseg($ans6)
+        check $ans6 in (1,)
+
+animal_class_nemat
+    use animal_class(Nematelminta)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_tora($ans2)
+        check $ans2 in (1,2)
+        questions.animal_abertura($ans3)
+        check $ans3 == 2
+        questions.animal_simetria($ans4)
+        check $ans4 in (2,)
+        questions.animal_corpo($ans5)
+        check $ans5 in (2,)
+        questions.corpo_nseg($ans6)
+        check $ans6 in (2,)

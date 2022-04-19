@@ -32,12 +32,62 @@ animal_respiracao($ans)
         1: Branquial
         2: Pulmonar
 
-animal_locomove($ans)
-    O possui capacidade de locomocao?
+animal_dorsal($ans)
+    O animal possui corda dorsal?
     ---
     $ans = yn
 
-animal_cnidocitos($ans)
-    O possui cnidocitos?
+animal_tora($ans)
+    O animal eh:
+    ---
+    $ans = select_1
+        1: Aquatico
+        2: Terrestre
+
+animal_abertura($ans)
+    Quantas aberturas o animal possui?
+    ---
+    $ans = integer(1-2)
+
+abertura_tentaculo($ans)
+    A abertura eh rodeada de tentaculos com celulas urticantes?
     ---
     $ans = yn
+
+corpo_poros($ans)
+    O corpo do animal possui poros?
+    ---
+    $ans = yn
+
+corpo_achatado($ans)
+    O corpo do animal eh achatado?
+    ---
+    $ans = yn
+
+animal_simetria($ans)
+    O animal tem uma simetria:
+    ---
+    $ans = select_1
+        1: Radial
+        2: Bilateral
+
+animal_corpo($ans)
+    O corpo do animal eh:
+    ---
+    $ans = select_1
+        1: Segmentado
+        2: Nao Segmentado
+
+corpo_seg($ans)
+    O animal tem um corpo:
+    ---
+    $ans = select_1
+        1: Mole
+        2: Com Exoesqueleto
+    
+corpo_nseg($ans)
+    O animal tem um corpo:
+    ---
+    $ans = select_1
+        1: Mole
+        2: Cilindrico
