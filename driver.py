@@ -1,4 +1,3 @@
-from pickle import TRUE
 import sys
 import os
 import shutil
@@ -23,7 +22,8 @@ def bc_test_question():
         krb_traceback.print_exc()
         sys.exit(1)
 
-    print("Animal nao encontrado") #printa a mesma quantidade de vezes que o sistema executa de forma certa
+    for x in range (0,1):
+        print("Animal nao encontrado")
 
 # shutil.rmtree('./compiled_krb')
 # driver.bc_test_question()
