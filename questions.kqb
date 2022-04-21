@@ -4,24 +4,26 @@ tipo_animal($ans)
     $ans = select_1
         1: Vertebrado
         2: Invertebrado
-    
-animal_mamas($ans)
-    O animal possui mamas?
-    ---
-    $ans = yn
 
 animal_escamas($ans)
     O animal possui escamas?
     ---
     $ans = yn
 
-animal_carapaca($ans)
-    O animal possui carapaca?
+animal_pele($ans)
+    Como eh a pele do animal?
+    ---
+    $ans = select_1
+        1: Pele nua
+        2: Pele revestida por pelos ou penas
+
+animal_asas($ans)
+    O animal possui asas?
     ---
     $ans = yn
 
-animal_penas($ans)
-    O animal possui penas?
+animal_mamas($ans)
+    O animal possui glandulas mamarias?
     ---
     $ans = yn
 

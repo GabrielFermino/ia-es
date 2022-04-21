@@ -1,6 +1,5 @@
 import sys
 import os
-import shutil
 from pyke import knowledge_engine, krb_traceback
 
 engine = knowledge_engine.engine(__file__)
@@ -25,5 +24,4 @@ def bc_test_question():
     for x in range (0,1):
         print("Animal nao encontrado")
 
-# shutil.rmtree('./compiled_krb')
 # driver.bc_test_question()

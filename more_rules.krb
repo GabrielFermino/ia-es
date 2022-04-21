@@ -1,41 +1,46 @@
-animal_class_mamifero
-    use animal_class(Mamifero)
-    when
-        questions.tipo_animal($ans)
-        check $ans in (1,)
-        questions.animal_mamas(True)
-
-animal_class_reptil_carapaca
-    use animal_class(Reptil)
-    when
-        questions.tipo_animal($ans)
-        check $ans in (1,)
-        questions.animal_carapaca(True)
-
-animal_class_peixe
+animal_class_peixes
     use animal_class(Peixe)
     when
-        questions.tipo_animal($ans)
-        check $ans in (1,)
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
         questions.animal_escamas(True)
         questions.animal_respiracao($ans2)
         check $ans2 in (1,)
-
-animal_class_reptil_escama
+    
+animal_class_repteis
     use animal_class(Reptil)
     when
-        questions.tipo_animal($ans)
-        check $ans in (1,)
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
         questions.animal_escamas(True)
         questions.animal_respiracao($ans2)
         check $ans2 in (2,)
 
-animal_class_ave
+animal_class_anfibio
+    use animal_class(Anfibio)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_pele($ans2)
+        check $ans2 in (1,)
+    
+animal_class_aves
     use animal_class(Ave)
     when
-        questions.tipo_animal($ans)
-        check $ans in (1,)
-        questions.animal_penas(True)
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_pele($ans2)
+        check $ans2 in (2,)
+        questions.animal_asas(True)
+
+nimal_class_mamifero
+    use animal_class(Mamifero)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_pele($ans2)
+        check $ans2 in (2,)
+        questions.animal_mamas(True)
 
 animal_class_cordados
     use animal_class(Cordado)
