@@ -5,91 +5,157 @@ tipo_animal($ans)
         1: Vertebrado
         2: Invertebrado
 
-animal_escamas($ans)
-    O animal possui escamas?
+animal_invert_exoesqueleto($ans)
+    O animal possui um exoesqueleto?
     ---
     $ans = yn
 
-animal_pele($ans)
-    Como eh a pele do animal?
-    ---
-    $ans = select_1
-        1: Pele nua
-        2: Pele revestida por pelos ou penas
-
-animal_asas($ans)
-    O animal possui asas?
+animal_invert_pernas_articuladas($ans)
+    O animal possui pernas articuladas?
     ---
     $ans = yn
 
-animal_mamas($ans)
-    O animal possui glandulas mamarias?
+animal_invert_corpo_segmentos($ans)
+    O animal possui um corpo divididos em segmentos?
     ---
     $ans = yn
 
-animal_respiracao($ans)
-    Qual o tipo de respiracao do animal?
-    ---
-    $ans = select_1
-        1: Branquial
-        2: Pulmonar
-
-animal_dorsal($ans)
-    O animal possui corda dorsal?
+animal_invert_esqueleto($ans)
+    O animal possui um esqueleto interno calcario e espinhos na pele?
     ---
     $ans = yn
 
-animal_tora($ans)
-    O animal eh:
-    ---
-    $ans = select_1
-        1: Aquatico
-        2: Terrestre
-
-animal_abertura($ans)
-    Quantas aberturas o animal possui?
-    ---
-    $ans = integer(1-2)
-
-abertura_tentaculo($ans)
-    A abertura eh rodeada de tentaculos com celulas urticantes?
+animal_invert_corpo_vermiforme($ans)
+    O animal possui um corpo vermiforme?
     ---
     $ans = yn
 
-corpo_poros($ans)
-    O corpo do animal possui poros?
+animal_invert_anus($ans)
+    O animal possui anus?
     ---
     $ans = yn
 
-corpo_achatado($ans)
-    O corpo do animal eh achatado?
+animal_invert_boca_sistnerv($ans)
+    O animal poussi boca e sistema nervoso?
     ---
     $ans = yn
 
-animal_simetria($ans)
-    O animal tem uma simetria:
+animal_vert_branqueas($ans)
+    O animal possui respiracao branquial?
     ---
-    $ans = select_1
-        1: Radial
-        2: Bilateral
+    $ans = yn
 
-animal_corpo($ans)
-    O corpo do animal eh:
+animal_vert_penas($ans)
+    O animal possui penas?
     ---
-    $ans = select_1
-        1: Segmentado
-        2: Nao Segmentado
+    $ans = yn
 
-corpo_seg($ans)
-    O animal tem um corpo:
+animal_vert_pelos($ans)
+    O animal possui pelos e glandulas mamarias?
+    ---
+    $ans = yn
+
+animal_vert_pele($ans)
+    Como é a pele do animal?
     ---
     $ans = select_1
-        1: Mole
-        2: Com Exoesqueleto
-    
-corpo_nseg($ans)
-    O animal tem um corpo:
+        1: Seca
+        2: Umida
+
+continue($ans)
+    Animal identificado! Gostaria de descreve-lo melhor?
+    ---
+    $ans = yn
+
+dif_por($ans)
+    Sobre o esquelto, é composto por:
     ---
     $ans = select_1
-        1: Mole
-        2: Cilindrico
+        1: Espiculas de Carbonato de calcario
+        2: Espiculas de Silica
+        3: Apenas fibras de espongina
+
+dif_cni_esqueleto($ans)
+    Tem esqueleto calcario?
+    ---
+    $ans = yn
+
+dif_plat_parasita($ans)
+    Eh um parasita humano?
+    ---
+    $ans = yn
+
+dif_plat_sexo($ans)
+    Em relacao ao sexo do animal:
+    ---
+    $ans = select_1
+        1: Hermafrodita
+        2: Possui sexos separados
+
+dif_moluscos($ans)
+    Com relacao a presenca da concha:
+    ---
+    $ans = select_1
+        1: Formando duas valvas
+        2: Em formato de espiral
+        3: Interna ou ausente
+
+dif_anelideo($ans)
+    Com relacao a presenca de cerdas:
+    ---
+    $ans = select_1
+        1: Muitas cerdas
+        2: Poucas cerdas
+        3: Ausencia de cerdas
+
+dif_artropode($ans)
+    Com relacao ao numero de pernas:
+    ---
+    $ans = select_1
+        1: 5 pares
+        2: 4 pares
+        3: 3 pares
+        4: 2 pares por segmentos
+        5: 1 par por segmento
+
+dif_peixe($ans)
+    Possui bexiga natatoria?
+    ---
+    $ans = yn
+
+dif_anfibios($ans)
+    Possui pernas?
+    ---
+    $ans = yn
+
+dif_anfibios_calda($ans)
+    Possui calda?
+    ---
+    $ans = yn
+
+dif_repteis($ans)
+    Possui escamas na pele?
+    ---
+    $ans = yn
+
+dif_repteis_casco($ans)
+    Possui casco?
+    ---
+    $ans = yn
+
+dif_aves($ans)
+    Possui quilia no peito?
+    ---
+    $ans = yn
+
+dif_mamifero($ans)
+    Possui marsupio?
+    ---
+    $ans = yn
+
+dif_mamifero_reprod($ans)
+    Para se reproduzir:
+    ---
+    $ans = select_1
+        1: Sao oviparos
+        2: Sao viviparos

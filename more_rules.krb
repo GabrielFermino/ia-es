@@ -1,160 +1,498 @@
-animal_class_peixes
-    use animal_class(Peixe)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (1,)
-        questions.animal_escamas(True)
-        questions.animal_respiracao($ans2)
-        check $ans2 in (1,)
-    
-animal_class_repteis
-    use animal_class(Reptil)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (1,)
-        questions.animal_escamas(True)
-        questions.animal_respiracao($ans2)
-        check $ans2 in (2,)
-
-animal_class_anfibio
-    use animal_class(Anfibio)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (1,)
-        questions.animal_pele($ans2)
-        check $ans2 in (1,)
-    
-animal_class_aves
-    use animal_class(Ave)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (1,)
-        questions.animal_pele($ans2)
-        check $ans2 in (2,)
-        questions.animal_asas(True)
-
-nimal_class_mamifero
-    use animal_class(Mamifero)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (1,)
-        questions.animal_pele($ans2)
-        check $ans2 in (2,)
-        questions.animal_mamas(True)
-
-animal_class_cordados
-    use animal_class(Cordado)
-    when
-        questions.tipo_animal($ans)
-        check $ans in (2,)
-        questions.animal_dorsal(True)
-
-animal_class_celenterados
-    use animal_class(Celenterados)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (2,)
-        questions.animal_dorsal(False)
-        questions.animal_tora($ans2)
-        check $ans2 in (1,)
-        questions.animal_abertura($ans3)
-        check $ans3 == 1
-        questions.abertura_tentaculo(True)
-
-animal_class_espongiarios
-    use animal_class(Espongiarios)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (2,)
-        questions.animal_tora($ans2)
-        check $ans2 in (1,)
-        questions.animal_abertura($ans3)
-        check $ans3 == 1
-        questions.corpo_poros(True)
-
-animal_class_platelminstas
-    use animal_class(Platelmintas)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (2,)
-        questions.animal_tora($ans2)
-        check $ans2 in (1,2)
-        questions.animal_abertura($ans3)
-        check $ans3 == 1
-        questions.corpo_achatado(True)
-
-animal_class_equinodermes
-    use animal_class(Equinodermes)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (2,)
-        questions.animal_tora($ans2)
-        check $ans2 in (1,)
-        questions.animal_abertura($ans3)
-        check $ans3 == 2
-        questions.animal_simetria($ans4)
-        check $ans4 in (1,)
-
-animal_class_anelideo
-    use animal_class(Anelideo)
-    when
-        questions.tipo_animal($ans1)
-        check $ans1 in (2,)
-        questions.animal_tora($ans2)
-        check $ans2 in (1,2)
-        questions.animal_abertura($ans3)
-        check $ans3 == 2
-        questions.animal_simetria($ans4)
-        check $ans4 in (2,)
-        questions.animal_corpo($ans5)
-        check $ans5 in (1,)
-        questions.corpo_seg($ans6)
-        check $ans6 in (1,)
+# Invertebrados
 
 animal_class_artropode
     use animal_class(Artropode)
     when
         questions.tipo_animal($ans1)
         check $ans1 in (2,)
-        questions.animal_tora($ans2)
-        check $ans2 in (1,2)
-        questions.animal_abertura($ans3)
-        check $ans3 == 2
-        questions.animal_simetria($ans4)
-        check $ans4 in (2,)
-        questions.animal_corpo($ans5)
-        check $ans5 in (1,)
-        questions.corpo_seg($ans6)
-        check $ans6 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(True)
+        questions.continue(False)
 
-animal_class_moluscos
+animal_class_molusco
     use animal_class(Molusco)
     when
         questions.tipo_animal($ans1)
         check $ans1 in (2,)
-        questions.animal_tora($ans2)
-        check $ans2 in (1,2)
-        questions.animal_abertura($ans3)
-        check $ans3 == 2
-        questions.animal_simetria($ans4)
-        check $ans4 in (2,)
-        questions.animal_corpo($ans5)
-        check $ans5 in (2,)
-        questions.corpo_nseg($ans6)
-        check $ans6 in (1,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(False)
+        questions.continue(False)
 
-animal_class_nemat
-    use animal_class(Nematelminta)
+animal_class_anelideo
+    use animal_class(Anelideo)
     when
         questions.tipo_animal($ans1)
         check $ans1 in (2,)
-        questions.animal_tora($ans2)
-        check $ans2 in (1,2)
-        questions.animal_abertura($ans3)
-        check $ans3 == 2
-        questions.animal_simetria($ans4)
-        check $ans4 in (2,)
-        questions.animal_corpo($ans5)
-        check $ans5 in (2,)
-        questions.corpo_nseg($ans6)
-        check $ans6 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(True)
+        questions.continue(False)
+    
+animal_class_equinodermo
+    use animal_class(Equinodermo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(True)
+        questions.continue(False)
+
+animal_class_nematelminto
+    use animal_class(Nematelminto)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(True)
+        questions.animal_invert_anus(True)
+
+animal_class_platelminto
+    use animal_class(Platelminto)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(True)
+        questions.animal_invert_anus(False)
+        questions.continue(False)
+
+animal_class_cnidario
+    use animal_class(Cnidario)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(False)
+        questions.animal_invert_boca_sistnerv(True)
+        questions.continue(False)
+
+animal_class_porifero
+    use animal_class(Porifero)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(False)
+        questions.animal_invert_boca_sistnerv(False)
+        questions.continue(False)
+
+# Vertebrados
+
+animal_class_peixes
+    use animal_class(Peixe)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_branqueas(True)
+        questions.continue(False)
+
+animal_class_ave
+    use animal_class(Ave)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_penas(True)
+        questions.continue(False)
+
+animal_class_mamiferos
+    use animal_class(Mamifero)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pelos(True)
+        questions.continue(False)
+
+animal_class_repteis
+    use animal_class(Reptil)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pele($ans2)
+        check $ans2 in (1,)
+        questions.continue(False)
+
+animal_class_anfibio
+    use animal_class(Anfibio)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pele($ans2)
+        check $ans2 in (2,)
+        questions.continue(False)
+
+# Diferenças
+
+animal_class_porifero_esponja_calcarea
+    use animal_class(EsponjaCalcarea)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(False)
+        questions.animal_invert_boca_sistnerv(False)
+        questions.continue(True)
+        questions.dif_por($ans2)
+        check $ans2 in (1,)
+
+animal_class_porifero_esponja_silicosa
+    use animal_class(EsponjaSilicosa)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(False)
+        questions.animal_invert_boca_sistnerv(False)
+        questions.continue(True)
+        questions.dif_por($ans2)
+        check $ans2 in (2,)
+
+animal_class_porifero_esponja_banho
+    use animal_class(EsponjadeBanho)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(False)
+        questions.animal_invert_boca_sistnerv(False)
+        questions.continue(True)
+        questions.dif_por($ans2)
+        check $ans2 in (3,)
+
+animal_class_cnidario_antozoario
+    use animal_class(Antozoario)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(False)
+        questions.animal_invert_boca_sistnerv(True)
+        questions.continue(True)
+        questions.dif_cni_esqueleto(True)
+
+animal_class_cnidario_cifozoario
+    use animal_class(Cifozoario)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(False)
+        questions.animal_invert_boca_sistnerv(True)
+        questions.continue(True)
+        questions.dif_cni_esqueleto(False)
+
+animal_class_cestodeos
+    use animal_class(Cestodeo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(True)
+        questions.animal_invert_anus(False)
+        questions.continue(True)
+        questions.dif_plat_parasita(True)
+        questions.dif_plat_sexo($ans2)
+        check $ans2 in (1,)
+
+animal_class_trematodeos
+    use animal_class(Trematodeo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(True)
+        questions.animal_invert_anus(False)
+        questions.continue(True)
+        questions.dif_plat_parasita(True)
+        question.dif_plat_sexo($ans2)
+        check $ans2 in (2,)
+
+animal_class_turbelareos
+    use animal_class(Turbelareo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(False)
+        questions.animal_invert_esqueleto(False)
+        questions.animal_invert_corpo_vermiforme(True)
+        questions.animal_invert_anus(False)
+        questions.continue(True)
+        questions.dif_plat_parasita(False)
+
+animal_class_bivalvos
+    use animal_class(Bivalvo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(False)
+        questions.continue(True)
+        questions.dif_moluscos($ans2)
+        check $ans2 in (1,)
+
+animal_class_gastropodes
+    use animal_class(Gastropode)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(False)
+        questions.continue(True)
+        questions.dif_moluscos($ans2)
+        check $ans2 in (2,)
+
+animal_class_cefalopodes
+    use animal_class(Cefalopode)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(False)
+        questions.continue(True)
+        questions.dif_moluscos($ans2)
+        check $ans2 in (3,)
+
+animal_class_poliquetas
+    use animal_class(Poliqueta)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(True)
+        questions.continue(True)
+        questions.dif_anelideo($ans2)
+        check $ans2 in (1,)
+
+animal_class_oligoquetas
+    use animal_class(Oligoqueta)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(True)
+        questions.continue(True)
+        questions.dif_anelideo($ans2)
+        check $ans2 in (2,)
+
+animal_class_aquetas
+    use animal_class(Aqueta)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(False)
+        questions.animal_invert_corpo_segmentos(True)
+        questions.continue(True)
+        questions.dif_anelideo($ans2)
+        check $ans2 in (3,)
+
+
+animal_class_crustaceos
+    use animal_class(Crustaceo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(True)
+        questions.continue(True)
+        questions.dif_artropode($ans2)
+        check $ans2 in (1,)
+
+animal_class_aracnideos
+    use animal_class(Aracnideo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(True)
+        questions.continue(True)
+        questions.dif_artropode($ans2)
+        check $ans2 in (2,)
+
+animal_class_inseto
+    use animal_class(Inseto)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(True)
+        questions.continue(True)
+        questions.dif_artropode($ans2)
+        check $ans2 in (3,)
+
+animal_class_diplopodes
+    use animal_class(Diplopode)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(True)
+        questions.continue(True)
+        questions.dif_artropode($ans2)
+        check $ans2 in (4,)
+
+animal_class_quilopodes
+    use animal_class(Quilopode)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (2,)
+        questions.animal_invert_exoesqueleto(True)
+        questions.animal_invert_pernas_articuladas(True)
+        questions.continue(True)
+        questions.dif_artropode($ans2)
+        check $ans2 in (5,)
+
+
+# ERRO
+
+animal_class_osteictes
+    use animal_class(Osteicte)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_branqueas(True)
+        questions.continue(True)
+        questions.dif_peixe(True)
+
+animal_class_condrictes
+    use animal_class(Condricte)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_branqueas(True)
+        questions.continue(True)
+        questions.dif_peixe(False)
+
+animal_class_urodelos
+    use animal_class(Urodelo)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pele($ans2)
+        check $ans2 in (2,)
+        questions.continue(True)
+        questions.dif_anfibios(True)
+        questions.dif_anfibios_calda(True)
+
+animal_class_anuros
+    use animal_class(Anuros)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pele($ans2)
+        check $ans2 in (2,)
+        questions.continue(True)
+        questions.dif_anfibios(True)
+        questions.dif_anfibios_calda(False)
+
+animal_class_apodas
+    use animal_class(Apoda)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pele($ans2)
+        check $ans2 in (2,)
+        questions.continue(True)
+        questions.dif_anfibios(False)
+
+animal_class_esquamatos
+    use animal_class(Esquamato)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pele($ans2)
+        check $ans2 in (1,)
+        questions.continue(True)
+        questions.dif_repteis(True)       
+
+animal_class_quelonios
+    use animal_class(Quelonio)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pele($ans2)
+        check $ans2 in (1,)
+        questions.continue(True)
+        questions.dif_repteis(False)
+        questions.dif_repteis_casco(True)
+
+animal_class_crocodiliano
+    use animal_class(Crocodiliano)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pele($ans2)
+        check $ans2 in (1,)
+        questions.continue(True)
+        questions.dif_repteis(False)
+        questions.dif_repteis_casco(False)
+
+animal_class_carinatas
+    use animal_class(Carinata)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_penas(True)
+        questions.continue(True)
+        questions.dif_aves(True)
+
+animal_class_ratitas
+    use animal_class(Ratitas)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_penas(True)
+        questions.continue(True)
+        questions.dif_aves(False)
+
+animal_class_marsupiais
+    use animal_class(Marsupiais)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pelos(True)
+        questions.continue(True)
+        questions.dif_mamifero(True)
+
+animal_class_monotremados
+    use animal_class(Monotremado)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pelos(True)
+        questions.continue(True)
+        questions.dif_mamifero(False)
+        questions.dif_mamifero_reprod($ans2)
+        check $ans2 in (1,)
+
+animal_class_placentarios
+    use animal_class(Placentario)
+    when
+        questions.tipo_animal($ans1)
+        check $ans1 in (1,)
+        questions.animal_vert_pelos(True)
+        questions.continue(True)
+        questions.dif_mamifero(False)
+        questions.dif_mamifero_reprod($ans2)
+        check $ans2 in (2,)
