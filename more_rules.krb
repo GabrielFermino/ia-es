@@ -99,6 +99,7 @@ animal_class_ave
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(True)
         questions.continue(False)
 
@@ -107,6 +108,8 @@ animal_class_mamiferos
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
         questions.animal_vert_pelos(True)
         questions.continue(False)
 
@@ -115,6 +118,9 @@ animal_class_repteis
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
+        questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (1,)
         questions.continue(False)
@@ -124,6 +130,9 @@ animal_class_anfibio
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
+        questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (2,)
         questions.continue(False)
@@ -383,14 +392,16 @@ animal_class_condrictes
         questions.animal_vert_branqueas(True)
         questions.continue(True)
         questions.dif_peixe(False)
-
+    
 animal_class_urodelos
     use animal_class(Urodelo)
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
+        questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
-        check $ans2 in (2,)
         questions.continue(True)
         questions.dif_anfibios(True)
         questions.dif_anfibios_calda(True)
@@ -400,8 +411,10 @@ animal_class_anuros
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
+        questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
-        check $ans2 in (2,)
         questions.continue(True)
         questions.dif_anfibios(True)
         questions.dif_anfibios_calda(False)
@@ -411,8 +424,10 @@ animal_class_apodas
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
+        questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
-        check $ans2 in (2,)
         questions.continue(True)
         questions.dif_anfibios(False)
 
@@ -421,6 +436,9 @@ animal_class_esquamatos
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
+        questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (1,)
         questions.continue(True)
@@ -431,6 +449,9 @@ animal_class_quelonios
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
+        questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (1,)
         questions.continue(True)
@@ -442,6 +463,9 @@ animal_class_crocodiliano
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
+        questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (1,)
         questions.continue(True)
@@ -453,6 +477,7 @@ animal_class_carinatas
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(True)
         questions.continue(True)
         questions.dif_aves(True)
@@ -462,6 +487,7 @@ animal_class_ratitas
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(True)
         questions.continue(True)
         questions.dif_aves(False)
@@ -471,6 +497,8 @@ animal_class_marsupiais
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
         questions.animal_vert_pelos(True)
         questions.continue(True)
         questions.dif_mamifero(True)
@@ -480,6 +508,8 @@ animal_class_monotremados
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
         questions.animal_vert_pelos(True)
         questions.continue(True)
         questions.dif_mamifero(False)
@@ -491,6 +521,8 @@ animal_class_placentarios
     when
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
+        questions.animal_vert_branqueas(False)
+        questions.animal_vert_penas(False)
         questions.animal_vert_pelos(True)
         questions.continue(True)
         questions.dif_mamifero(False)

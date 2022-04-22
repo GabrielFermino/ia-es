@@ -56,7 +56,7 @@ animal_vert_pelos($ans)
     $ans = yn
 
 animal_vert_pele($ans)
-    Como é a pele do animal?
+    Como eh a pele do animal?
     ---
     $ans = select_1
         1: Seca
@@ -67,8 +67,50 @@ continue($ans)
     ---
     $ans = yn
 
+dif_peixe($ans)
+    Possui bexiga natatoria?
+    ---
+    $ans = yn
+
+dif_anfibios($ans)
+    Possui pernas?
+    ---
+    $ans = yn
+
+dif_anfibios_calda($ans)
+    Possui calda?
+    ---
+    $ans = yn
+
+dif_repteis($ans)
+    Possui escamas na pele?
+    ---
+    $ans = yn
+
+dif_repteis_casco($ans)
+    Possui casco?
+    ---
+    $ans = yn
+
+dif_aves($ans)
+    Possui quilia no peito?
+    ---
+    $ans = yn
+
+dif_mamifero($ans)
+    Possui marsupio?
+    ---
+    $ans = yn
+
+dif_mamifero_reprod($ans)
+    Para se reproduzir:
+    ---
+    $ans = select_1
+        1: Sao oviparos
+        2: Sao viviparos
+
 dif_por($ans)
-    Sobre o esquelto, é composto por:
+    Sobre o esquelto, eh composto por:
     ---
     $ans = select_1
         1: Espiculas de Carbonato de calcario
@@ -117,45 +159,3 @@ dif_artropode($ans)
         3: 3 pares
         4: 2 pares por segmentos
         5: 1 par por segmento
-
-dif_peixe($ans)
-    Possui bexiga natatoria?
-    ---
-    $ans = yn
-
-dif_anfibios($ans)
-    Possui pernas?
-    ---
-    $ans = yn
-
-dif_anfibios_calda($ans)
-    Possui calda?
-    ---
-    $ans = yn
-
-dif_repteis($ans)
-    Possui escamas na pele?
-    ---
-    $ans = yn
-
-dif_repteis_casco($ans)
-    Possui casco?
-    ---
-    $ans = yn
-
-dif_aves($ans)
-    Possui quilia no peito?
-    ---
-    $ans = yn
-
-dif_mamifero($ans)
-    Possui marsupio?
-    ---
-    $ans = yn
-
-dif_mamifero_reprod($ans)
-    Para se reproduzir:
-    ---
-    $ans = select_1
-        1: Sao oviparos
-        2: Sao viviparos
