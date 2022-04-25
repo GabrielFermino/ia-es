@@ -7,7 +7,7 @@ animal_class_artropode
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(True)
-        questions.continue(False)
+        questions.continue(False, Artropode)
 
 animal_class_molusco
     use animal_class(Molusco)
@@ -16,7 +16,7 @@ animal_class_molusco
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(False)
-        questions.continue(False)
+        questions.continue(False, Molusco)
 
 animal_class_anelideo
     use animal_class(Anelideo)
@@ -25,8 +25,8 @@ animal_class_anelideo
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(False)
         questions.animal_invert_corpo_segmentos(True)
-        questions.continue(False)
-    
+        questions.continue(False, Anelideo)
+
 animal_class_equinodermo
     use animal_class(Equinodermo)
     when
@@ -35,7 +35,7 @@ animal_class_equinodermo
         questions.animal_invert_exoesqueleto(False)
         questions.animal_invert_corpo_segmentos(False)
         questions.animal_invert_esqueleto(True)
-        questions.continue(False)
+        questions.continue(False, Equinodermo)
 
 animal_class_nematelminto
     use animal_class(Nematelminto)
@@ -58,7 +58,7 @@ animal_class_platelminto
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(True)
         questions.animal_invert_anus(False)
-        questions.continue(False)
+        questions.continue(False, Platelminto)
 
 animal_class_cnidario
     use animal_class(Cnidario)
@@ -70,7 +70,7 @@ animal_class_cnidario
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(False)
         questions.animal_invert_boca_sistnerv(True)
-        questions.continue(False)
+        questions.continue(False, Cnidario)
 
 animal_class_porifero
     use animal_class(Porifero)
@@ -82,7 +82,7 @@ animal_class_porifero
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(False)
         questions.animal_invert_boca_sistnerv(False)
-        questions.continue(False)
+        questions.continue(False, Porifero)
 
 # Vertebrados
 
@@ -92,7 +92,7 @@ animal_class_peixes
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
         questions.animal_vert_branqueas(True)
-        questions.continue(False)
+        questions.continue(False, Peixe)
 
 animal_class_ave
     use animal_class(Ave)
@@ -101,7 +101,7 @@ animal_class_ave
         check $ans1 in (1,)
         questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(True)
-        questions.continue(False)
+        questions.continue(False, Ave)
 
 animal_class_mamiferos
     use animal_class(Mamifero)
@@ -111,7 +111,7 @@ animal_class_mamiferos
         questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(False)
         questions.animal_vert_pelos(True)
-        questions.continue(False)
+        questions.continue(False, Mamifero)
 
 animal_class_repteis
     use animal_class(Reptil)
@@ -123,7 +123,7 @@ animal_class_repteis
         questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (1,)
-        questions.continue(False)
+        questions.continue(False, Reptil)
 
 animal_class_anfibio
     use animal_class(Anfibio)
@@ -135,7 +135,7 @@ animal_class_anfibio
         questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (2,)
-        questions.continue(False)
+        questions.continue(False, Anfibio)
 
 # Diferenças
 
@@ -149,7 +149,7 @@ animal_class_porifero_esponja_calcarea
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(False)
         questions.animal_invert_boca_sistnerv(False)
-        questions.continue(True)
+        questions.continue(True, EsponjaCalcarea)
         questions.dif_por($ans2)
         check $ans2 in (1,)
 
@@ -163,7 +163,7 @@ animal_class_porifero_esponja_silicosa
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(False)
         questions.animal_invert_boca_sistnerv(False)
-        questions.continue(True)
+        questions.continue(True, EsponjaSilicosa)
         questions.dif_por($ans2)
         check $ans2 in (2,)
 
@@ -177,7 +177,7 @@ animal_class_porifero_esponja_banho
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(False)
         questions.animal_invert_boca_sistnerv(False)
-        questions.continue(True)
+        questions.continue(True, EsponjadeBanho)
         questions.dif_por($ans2)
         check $ans2 in (3,)
 
@@ -191,7 +191,7 @@ animal_class_cnidario_antozoario
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(False)
         questions.animal_invert_boca_sistnerv(True)
-        questions.continue(True)
+        questions.continue(True, Antozoario)
         questions.dif_cni_esqueleto(True)
 
 animal_class_cnidario_cifozoario
@@ -204,7 +204,7 @@ animal_class_cnidario_cifozoario
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(False)
         questions.animal_invert_boca_sistnerv(True)
-        questions.continue(True)
+        questions.continue(True, Cifozoario)
         questions.dif_cni_esqueleto(False)
 
 animal_class_cestodeos
@@ -217,7 +217,7 @@ animal_class_cestodeos
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(True)
         questions.animal_invert_anus(False)
-        questions.continue(True)
+        questions.continue(True, Cestodeo)
         questions.dif_plat_parasita(True)
         questions.dif_plat_sexo($ans2)
         check $ans2 in (1,)
@@ -232,7 +232,7 @@ animal_class_trematodeos
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(True)
         questions.animal_invert_anus(False)
-        questions.continue(True)
+        questions.continue(True, Trematodeo)
         questions.dif_plat_parasita(True)
         question.dif_plat_sexo($ans2)
         check $ans2 in (2,)
@@ -247,7 +247,7 @@ animal_class_turbelareos
         questions.animal_invert_esqueleto(False)
         questions.animal_invert_corpo_vermiforme(True)
         questions.animal_invert_anus(False)
-        questions.continue(True)
+        questions.continue(True, Turbelareo)
         questions.dif_plat_parasita(False)
 
 animal_class_bivalvos
@@ -257,7 +257,7 @@ animal_class_bivalvos
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(False)
-        questions.continue(True)
+        questions.continue(True, Bivalvo)
         questions.dif_moluscos($ans2)
         check $ans2 in (1,)
 
@@ -268,7 +268,7 @@ animal_class_gastropodes
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(False)
-        questions.continue(True)
+        questions.continue(True, Gastropode)
         questions.dif_moluscos($ans2)
         check $ans2 in (2,)
 
@@ -279,7 +279,7 @@ animal_class_cefalopodes
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(False)
-        questions.continue(True)
+        questions.continue(True, Cefalopode)
         questions.dif_moluscos($ans2)
         check $ans2 in (3,)
 
@@ -290,7 +290,7 @@ animal_class_poliquetas
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(False)
         questions.animal_invert_corpo_segmentos(True)
-        questions.continue(True)
+        questions.continue(True, Poliqueta)
         questions.dif_anelideo($ans2)
         check $ans2 in (1,)
 
@@ -301,7 +301,7 @@ animal_class_oligoquetas
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(False)
         questions.animal_invert_corpo_segmentos(True)
-        questions.continue(True)
+        questions.continue(True, Oligoqueta)
         questions.dif_anelideo($ans2)
         check $ans2 in (2,)
 
@@ -312,7 +312,7 @@ animal_class_aquetas
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(False)
         questions.animal_invert_corpo_segmentos(True)
-        questions.continue(True)
+        questions.continue(True, Aqueta)
         questions.dif_anelideo($ans2)
         check $ans2 in (3,)
 
@@ -324,7 +324,7 @@ animal_class_crustaceos
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(True)
-        questions.continue(True)
+        questions.continue(True, Crustaceo)
         questions.dif_artropode($ans2)
         check $ans2 in (1,)
 
@@ -335,7 +335,7 @@ animal_class_aracnideos
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(True)
-        questions.continue(True)
+        questions.continue(True, Aracnideo)
         questions.dif_artropode($ans2)
         check $ans2 in (2,)
 
@@ -346,7 +346,7 @@ animal_class_inseto
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(True)
-        questions.continue(True)
+        questions.continue(True, Inseto)
         questions.dif_artropode($ans2)
         check $ans2 in (3,)
 
@@ -357,7 +357,7 @@ animal_class_diplopodes
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(True)
-        questions.continue(True)
+        questions.continue(True, Diplopode)
         questions.dif_artropode($ans2)
         check $ans2 in (4,)
 
@@ -368,7 +368,7 @@ animal_class_quilopodes
         check $ans1 in (2,)
         questions.animal_invert_exoesqueleto(True)
         questions.animal_invert_pernas_articuladas(True)
-        questions.continue(True)
+        questions.continue(True, Quilopode)
         questions.dif_artropode($ans2)
         check $ans2 in (5,)
 
@@ -381,7 +381,7 @@ animal_class_osteictes
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
         questions.animal_vert_branqueas(True)
-        questions.continue(True)
+        questions.continue(True, Osteicte)
         questions.dif_peixe(True)
 
 animal_class_condrictes
@@ -390,9 +390,9 @@ animal_class_condrictes
         questions.tipo_animal($ans1)
         check $ans1 in (1,)
         questions.animal_vert_branqueas(True)
-        questions.continue(True)
+        questions.continue(True, Osteicte)
         questions.dif_peixe(False)
-    
+
 animal_class_urodelos
     use animal_class(Urodelo)
     when
@@ -402,7 +402,7 @@ animal_class_urodelos
         questions.animal_vert_penas(False)
         questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
-        questions.continue(True)
+        questions.continue(True, Urodelo)
         questions.dif_anfibios(True)
         questions.dif_anfibios_calda(True)
 
@@ -415,7 +415,7 @@ animal_class_anuros
         questions.animal_vert_penas(False)
         questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
-        questions.continue(True)
+        questions.continue(True, Anuros)
         questions.dif_anfibios(True)
         questions.dif_anfibios_calda(False)
 
@@ -428,7 +428,7 @@ animal_class_apodas
         questions.animal_vert_penas(False)
         questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
-        questions.continue(True)
+        questions.continue(True, Apoda)
         questions.dif_anfibios(False)
 
 animal_class_esquamatos
@@ -441,8 +441,8 @@ animal_class_esquamatos
         questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (1,)
-        questions.continue(True)
-        questions.dif_repteis(True)       
+        questions.continue(True, Esquamato)
+        questions.dif_repteis(True)
 
 animal_class_quelonios
     use animal_class(Quelonio)
@@ -454,7 +454,7 @@ animal_class_quelonios
         questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (1,)
-        questions.continue(True)
+        questions.continue(True, Quelonio)
         questions.dif_repteis(False)
         questions.dif_repteis_casco(True)
 
@@ -468,7 +468,7 @@ animal_class_crocodiliano
         questions.animal_vert_pelos(False)
         questions.animal_vert_pele($ans2)
         check $ans2 in (1,)
-        questions.continue(True)
+        questions.continue(True, Crocodiliano)
         questions.dif_repteis(False)
         questions.dif_repteis_casco(False)
 
@@ -479,7 +479,7 @@ animal_class_carinatas
         check $ans1 in (1,)
         questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(True)
-        questions.continue(True)
+        questions.continue(True, Carinata)
         questions.dif_aves(True)
 
 animal_class_ratitas
@@ -489,7 +489,7 @@ animal_class_ratitas
         check $ans1 in (1,)
         questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(True)
-        questions.continue(True)
+        questions.continue(True, Ratitas)
         questions.dif_aves(False)
 
 animal_class_marsupiais
@@ -500,7 +500,7 @@ animal_class_marsupiais
         questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(False)
         questions.animal_vert_pelos(True)
-        questions.continue(True)
+        questions.continue(True, Marsupiais)
         questions.dif_mamifero(True)
 
 animal_class_monotremados
@@ -511,7 +511,7 @@ animal_class_monotremados
         questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(False)
         questions.animal_vert_pelos(True)
-        questions.continue(True)
+        questions.continue(True, Monotremado)
         questions.dif_mamifero(False)
         questions.dif_mamifero_reprod($ans2)
         check $ans2 in (1,)
@@ -524,7 +524,7 @@ animal_class_placentarios
         questions.animal_vert_branqueas(False)
         questions.animal_vert_penas(False)
         questions.animal_vert_pelos(True)
-        questions.continue(True)
+        questions.continue(True, Placentario)
         questions.dif_mamifero(False)
         questions.dif_mamifero_reprod($ans2)
         check $ans2 in (2,)
