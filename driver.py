@@ -1,8 +1,10 @@
 import sys
+import driver
 import os
 from pyke import knowledge_engine, krb_traceback
 
 engine = knowledge_engine.engine(__file__)
+
 
 def bc_test_question():
     engine.reset()
@@ -16,12 +18,13 @@ def bc_test_question():
                 input("Press Enter to continue...")
                 os.system('cls')
                 bc_test_question()
-                         
+
     except:
         krb_traceback.print_exc()
         sys.exit(1)
 
-    for x in range (0,1):
+    for x in range(0, 1):
         print("Animal nao encontrado")
 
-# driver.bc_test_question()
+
+driver.bc_test_question()
