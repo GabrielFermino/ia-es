@@ -62,8 +62,8 @@ animal_vert_pele($ans)
         1: Seca
         2: Umida
 
-continue($ans, $class)
-    O animal é da superclasse: $class! Gostaria de descreve-lo melhor?
+continue($ans)
+    Animal identificado! Gostaria de descreve-lo melhor?
     ---
     $ans = yn
 
